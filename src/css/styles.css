@@ -86,12 +86,22 @@ body {
   font-size: 1.1em;
 }
 
+main {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 90ch;
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 70ch;
 }
 
 .flow > * {
+  hyphens: auto;
   margin-top: 0.5em;
+  text-align: justify;
 }
