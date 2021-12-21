@@ -100,8 +100,13 @@ main {
   width: 70ch;
 }
 
+@supports(hyphens: auto) {
+  .flow > p {
+    hyphens: auto;
+    text-align: justify;
+  }
+}
+
 .flow > * {
-  hyphens: auto;
   margin-top: 0.5em;
-  text-align: justify;
 }
