@@ -110,3 +110,46 @@ main {
 .flow > * {
   margin-top: 0.5em;
 }
+
+.flex-wrap  {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-header .container > * {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.main-header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header .language-nav li > * {
+  padding: 0.125rem 0.5rem;
+}
+
+.main-header .language-nav li ~ *::before {
+  content: "|";
+}
+
+.main-header a,
+.main-header *.as-a {
+  border-width: 0.125rem;
+  border-color: transparent;
+  border-style: dashed;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.main-header a:hover,
+.main-header a:focus,
+.main-header a:focus-visible,
+.main-header a:focus-within {
+  border-color: rgb(90, 90, 14);
+}

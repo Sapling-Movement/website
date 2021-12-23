@@ -1,0 +1,55 @@
+<header class="main-header">
+  <div class="container">
+    <div class="flex-wrap">
+      <a href="{{ languages[lang].prefix }}" class="logo">Sapling Movement</a>
+      <nav class="language-nav">
+        <ul>
+          {% for lang_key, lang_data in languages %}
+            {% for _page in collections.all %}
+              {% if (_page.data.lang === lang_key) and (_page.data.key === key) %}
+                <li>
+                  {% if page.url === _page.data.page.url %}
+                    {% set current_page = true %}
+                  {% endif %}
+                  {% if current_page %}
+                    <span class="as-a">
+                  {% else %}
+                    <a
+                      rel="alternate"
+                      hreflang="{{ lang_key }}"
+                      href="{{ _page.data.page.url }}"
+                    >
+                  {% endif %}
+                  {{ lang_key }}
+                  {% if current_page %}
+                    </span>
+                  {% endif %}
+                    </a>
+                  {% else %}
+                </li>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        {% for nav_item in navigation[lang] %}
+          {% for _page in collections.all %}
+            {% if (_page.data.lang === lang) and (_page.data.key  === nav_item.page) %}
+              {% if page.url === _page.data.page.url %}
+                {% set current_page = true %}
+              {% endif %}
+              <li>
+                <a href="{{ _page.data.page.url }}" {% if current_page %}aria-current="page"{% endif %}>
+                  {{ nav_item.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
