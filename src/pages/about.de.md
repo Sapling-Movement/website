@@ -1,4 +1,0 @@
----
-slug: 'ueber'
----
-# Über uns

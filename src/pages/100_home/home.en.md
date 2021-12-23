@@ -1,9 +1,9 @@
 ---
-slug: ''
+slug: '/'
+title: 'Sapling Movement'
 ---
 
 
-# Sapling Movement
 
 ## Our world is broken
 

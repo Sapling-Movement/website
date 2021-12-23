@@ -1,15 +1,10 @@
 ---
-slug: ''
+slug: '/'
+title: 'Sapling Movement'
 ---
 
-Inhalte:
-
-* Einleitung / Entstehung / Gründe
-* Vorgehen
-* Ausblick
+Zu ergänzen:
 * Philosophie
-
-# Sapling Movement
 
 ## Unsere Welt ist kaputt
 
@@ -38,3 +33,12 @@ Im ersten Schritt mache ich mir Gedanken, in welcher Art wir Social Media konkre
 Zudem versuche ich herauszufinden, was für Content auf sapling-movement.com zusammengetragen werden soll und wie dieser präsentiert werden soll.
 
 Cool wäre, wenn sich bereits ab Beginn einige Seelen zur Mitarbeit melden würden. Wenn du gerne einen Beitrag zu einer besseren Welt leisten möchtest und ebenfalls Potenzial in dieser Idee siehst, schick mir eine Nachricht.
+
+Ideen für Blogpost:
+
+* Nachhaltige Grosskonzerne sind ein Widerspruch / Sustainable corporate groups are a contradiction
+* Fleischlose Rezepte für den Winter
+
+—> Rubriken
+* Blog
+* Rezepte, Filter: Saison, Art[Vorspeise, Hauptgang, Dessert]

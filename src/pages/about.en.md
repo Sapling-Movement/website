@@ -1,4 +1,0 @@
----
-slug: 'about'
----
-# About us
