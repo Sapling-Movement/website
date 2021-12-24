@@ -8,7 +8,7 @@ Zu ergänzen:
 
 ## Unsere Welt ist kaputt
 
-Es scheint als würden wir uns auf das Ende zu bewegen. Die Nachrichten zeichnen ein erdrückendes Bild: Naturkatastrophen werden häufiger und heftiger, Tierarten sterben aus und das Klima erwärmt sich fortlaufend. Wir Menschen zerstören unsere Lebensgrundlage – die Natur unseres Heimatplaneten.
+Es scheint als würden wir uns auf das Ende zu bewegen. Die Nachrichten zeichnen ein erdrückendes Bild: Naturkatastrophen werden häufiger und heftiger, Tierarten sterben aus und das Klima erwärmt sich fortlaufend. Wir Menschen zerstören unsere Lebensgrundlage – die Natur unseres Heimatplaneten.
 
 ## Mission
 
@@ -32,13 +32,4 @@ Im ersten Schritt mache ich mir Gedanken, in welcher Art wir Social Media konkre
 
 Zudem versuche ich herauszufinden, was für Content auf sapling-movement.com zusammengetragen werden soll und wie dieser präsentiert werden soll.
 
-Cool wäre, wenn sich bereits ab Beginn einige Seelen zur Mitarbeit melden würden. Wenn du gerne einen Beitrag zu einer besseren Welt leisten möchtest und ebenfalls Potenzial in dieser Idee siehst, schick mir eine Nachricht.
-
-Ideen für Blogpost:
-
-* Nachhaltige Grosskonzerne sind ein Widerspruch / Sustainable corporate groups are a contradiction
-* Fleischlose Rezepte für den Winter
-
-—> Rubriken
-* Blog
-* Rezepte, Filter: Saison, Art[Vorspeise, Hauptgang, Dessert]
+Cool wäre, wenn sich bereits ab Beginn einige Seelen zur Mitarbeit melden würden. Wenn du gerne einen Beitrag zu einer besseren Welt leisten möchtest und ebenfalls Potenzial in dieser Idee siehst, schick mir eine Nachricht: [timon@sapling-movement.com](mailto:timon@sapling-movement.com)
