@@ -1,6 +1,7 @@
 ---
 slug: '/blog/das-geschaeft-mit-der-nachhaltigkeit'
 title: 'Das Geschäft mit der Nachhaltigkeiit'
+published: 12-31-2021
 ---
 
 Die meisten Grosskonzerne sind nicht nachhaltig – obwohl sie sich als das verkaufen. Es fehlt ihnen der Wille, ganzheitlich nachhaltig zu denken und das Richtige zu tun. Nachhaltigkeit kann man derzeit eher dem Marketing zuordnen als einer Unternehmensstrategie – es ist ein Mittel um zusätzliche Kundschaft zu gewinnen und um den Konsum anzukurbeln.
@@ -23,6 +24,7 @@ Für die meisten Grosskonzerne steht Gewinnmaximierung und Wachstum im Zentrum. 
 
 ## Was wir tun können
 
-Als Konsumenten haben wir eine gewisse Macht über die Konzerne. Wenn wir uns Gedanken über unseren Konsum machen und allein kaufen, was wir wahrhaftig brauchen, tun wir der Umwelt was Gutes. Das Beste: Damit kannst du sofort loslegen.
+Als Konsumenten haben wir eine gewisse Macht über die Konzerne. Wenn wir uns Gedanken über unseren Konsum machen und allein kaufen, was wir wahrhaftig brauchen, tun wir der Umwelt was Gutes.
 
-Teil der Philosophie des Sapling Movements ist zudem, Firmen zum ganzheitlich nachhaltigen Denken zu Bewegen. Wir wollen die Firmen dazu anregen, moralisch richtig zu handeln – bis dorthin ist aber ein langer Weg. Deswegen ist umso wichtiger, dass wir zuerst alles machen, das in unserer Macht steht. Dazu gehört: Nichts kaufen, das wir schon haben und defektes nach Möglichkeit reparieren.
+Teil der Philosophie des Sapling Movements ist, Firmen zu ganzheitlich nachhaltigem Denken zu Bewegen. Wir wollen die Firmen dazu anregen, moralisch richtig zu handeln – bis dorthin ist aber ein langer Weg. Deswegen ist umso wichtiger, dass wir zuerst alles machen, das in unserer Macht steht. Dazu gehört: Nichts kaufen, das wir schon haben und defektes nach Möglichkeit reparieren.
+
