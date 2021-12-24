@@ -1,4 +1,4 @@
 ---
 slug: '/ueber'
-title: 'über uns'
+title: 'Über uns'
 ---
