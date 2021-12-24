@@ -34,7 +34,7 @@
       </nav>
     </div>
     <nav class="main-nav">
-      <ul>
+      <ul class="reel">
         {% for nav_item in navigation[lang] %}
           {% for _page in collections.all %}
             {% if (_page.data.lang === lang) and (_page.data.key  === nav_item.page) %}
