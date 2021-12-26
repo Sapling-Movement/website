@@ -4,31 +4,31 @@
       <a href="{{ languages[lang].prefix }}" class="logo">Sapling Movement</a>
       <nav class="language-nav">
         <ul>
-          {% for lang_key, lang_data in languages %}
-            {% for _page in collections.all %}
-              {% if (_page.data.lang === lang_key) and (_page.data.key === key) %}
-                <li>
-                  {% if page.url === _page.data.page.url %}
-                    {% set current_page = true %}
-                  {% endif %}
-                  {% if current_page %}
+          {%- for lang_key, lang_data in languages -%}
+            <li>
+              {%- for _page in collections.all -%}
+                {%- if (_page.data.lang === lang_key) and (_page.data.key === key) -%}
+                  {%- if page.url === _page.data.page.url -%}
+                    {% set current_page = true -%}
+                  {%- endif -%}
+                  {%- if current_page -%}
                     <span class="as-a">
-                  {% else %}
+                  {%- else -%}
                     <a
                       rel="alternate"
                       hreflang="{{ lang_key }}"
                       href="{{ _page.data.page.url }}"
                     >
-                  {% endif %}
-                  {{ lang_key }}
-                  {% if current_page %}
+                  {%- endif -%}
+                  {{- lang_key -}}
+                  {%- if current_page -%}
                     </span>
-                  {% endif %}
+                  {%- else -%}
                     </a>
-                  {% else %}
-                </li>
-              {% endif %}
-            {% endfor %}
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </li>
           {% endfor %}
         </ul>
       </nav>
