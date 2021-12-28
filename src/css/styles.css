@@ -81,6 +81,22 @@ select {
 Custom Styles
 ---*/
 
+:root {
+  --base-color1: 60;
+  --base-color2: 340;
+
+  --base-color1-lighter: hsla(var(--base-color1), 50%, 85%, 100%);
+  --base-color1-light: hsla(var(--base-color1), 50%, 75%, 100%);
+  --base-color1-normal: hsla(var(--base-color1), 50%, 50%, 100%);
+  --base-color1-dark: hsla(var(--base-color1), 50%, 35%, 100%);
+  --base-color1-darker: hsla(var(--base-color1), 50%, 25%, 100%);
+
+  --base-color2-lighter: hsla(var(--base-color2), 50%,85%, 100%);
+  --base-color2-light: hsla(var(--base-color2), 50%, 75%, 100%);
+  --base-color2-normal: hsla(var(--base-color2), 50%, 50%, 100%);
+  --base-color2-dark: hsla(var(--base-color2), 50%, 35%, 100%);
+  --base-color2-darker: hsla(var(--base-color2), 50%, 25%, 100%);
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -135,6 +151,10 @@ h3 {
   --fluid-type-max: 1.5rem;
 }
 
+a {
+  color: var(--base-color1-darker);
+}
+
 main {
   margin-top: 3rem;
   margin-bottom: 6rem;
@@ -149,7 +169,6 @@ main {
   width: 70ch;
 }
 
-
 .flow > * {
   margin-top: 0.5em;
 }
@@ -162,6 +181,7 @@ main {
 }
 
 .logo {
+  color: var(--base-color1-dark);
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.1;
@@ -197,11 +217,22 @@ main {
   text-decoration: none;
 }
 
+.main-header .language-nav a,
+.main-header .language-nav *.as-a {
+  border: none;
+  text-decoration-color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+.main-header .language-nav a:hover {
+  text-decoration: underline;
+}
+
 .main-header a:hover,
 .main-header a:focus,
 .main-header a:focus-visible,
 .main-header a:focus-within {
-  border-color: rgb(90, 90, 14);
+  border-color: inherit;
 }
 
 .main-header nav.main-nav {
