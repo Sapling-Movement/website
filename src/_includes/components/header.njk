@@ -5,9 +5,9 @@
       <nav class="language-nav">
         <ul>
           {%- for lang_key, lang_data in languages -%}
-            <li>
-              {%- for _page in collections.all -%}
-                {%- if (_page.data.lang === lang_key) and (_page.data.key === key) -%}
+            {%- for _page in collections.all -%}
+              {%- if (_page.data.lang === lang_key) and (_page.data.key === key) -%}
+                <li>
                   {%- if page.url === _page.data.page.url -%}
                     {% set current_page = true -%}
                   {%- endif -%}
@@ -26,9 +26,9 @@
                   {%- else -%}
                     </a>
                   {%- endif -%}
-                {%- endif -%}
-              {%- endfor -%}
-            </li>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
           {% endfor %}
         </ul>
       </nav>
