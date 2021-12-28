@@ -1,7 +1,15 @@
 <ul>
-  {% for post in collections.posts %}
-    {% if post.data.lang === lang %}
-<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+{% for post in collections.posts %}
+{% if post.data.lang === lang %}
+<li>
+<a href="{{ post.url }}">
+{{ post.data.title }}
+</a>
+{% if post.data.excerpt %}
+<p>{{ post.data.excerpt }}</p>
+{% endif %}
+</li>
+
+{% endif %}
+{% endfor %}
 </ul>
