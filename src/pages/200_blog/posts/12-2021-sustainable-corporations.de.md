@@ -1,7 +1,7 @@
 ---
 slug: '/blog/das-geschaeft-mit-der-nachhaltigkeit'
-title: 'Das Geschäft mit der Nachhaltigkeiit'
-published: 12-31-2021
+title: 'Das Geschäft mit der Nachhaltigkeit'
+published: 12-24-2021
 ---
 
 Die meisten Grosskonzerne sind nicht nachhaltig – obwohl sie sich als das verkaufen. Es fehlt ihnen der Wille, ganzheitlich nachhaltig zu denken und das Richtige zu tun. Nachhaltigkeit kann man derzeit eher dem Marketing zuordnen als einer Unternehmensstrategie – es ist ein Mittel um zusätzliche Kundschaft zu gewinnen und um den Konsum anzukurbeln.
