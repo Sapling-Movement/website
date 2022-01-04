@@ -21,9 +21,11 @@
 </head>
 <body>
   {% include 'components/header.njk' %}
-  <main class="container flow">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+  <main class="container">
+    <div class="container--narrow flow">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+    </div>
   </main>
 
   <script>
