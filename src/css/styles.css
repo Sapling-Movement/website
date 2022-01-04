@@ -176,6 +176,7 @@ main {
 
 .container--narrow {
   width: 65ch;
+  max-width: 100%;
 }
 
 .flow > * {
