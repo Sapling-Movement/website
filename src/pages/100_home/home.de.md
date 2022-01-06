@@ -5,7 +5,7 @@ title: 'Sapling Movement'
 
 ## Unsere Welt ist kaputt
 
-Es scheint als würden wir uns auf das Ende zu bewegen: Naturkatastrophen werden häufiger und heftiger, Tierarten sterben aus und das Klima erwärmt sich fortlaufend. Wir Menschen zerstören unsere Lebensgrundlage – die Natur unseres Heimatplaneten.
+Es scheint als würden wir auf das Ende zusteuern: Naturkatastrophen werden häufiger und heftiger, Tierarten sterben aus und das Klima erwärmt sich fortlaufend. Wir Menschen zerstören unsere Lebensgrundlage – die Natur unseres Heimatplaneten.
 
 ## Mission
 
