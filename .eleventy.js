@@ -1,12 +1,15 @@
 module.exports = function(config) {
 
-  config.addPassthroughCopy("src/css");
+  config.addPassthroughCopy('src/css');
 
   return {
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: 'njk',
     dir: {
-      input: "src",
-      output: "dist"
+      data: 'data',
+      input: 'src',
+      includes: 'components',
+      layouts: 'layouts',
+      output: 'dist',
     }
   }
 }
