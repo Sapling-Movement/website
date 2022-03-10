@@ -11,4 +11,11 @@ eleventyComputed:
   lang: "{{ _data.__lang }}"
 ---
 
-{{ _data.pageBase.title }}
+{{ _data.text | toHTML | safe }}
+
+<details>
+  <summary>data</summary>
+  <pre>
+    {{ _data | dump(2) }}
+  </pre>
+</details>
