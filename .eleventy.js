@@ -1,4 +1,5 @@
 module.exports = function(config) {
+  require('dotenv').config();
 
   config.addPassthroughCopy('src/css');
 
