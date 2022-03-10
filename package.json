@@ -4,7 +4,8 @@
   "description": "The official Sapling Movement website.",
   "main": "index.html",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve",
+    "dev": "rm -rf dist && npx @11ty/eleventy --serve",
+    "dev-nocache": "rm -rf dist && NO_CACHE=true npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
