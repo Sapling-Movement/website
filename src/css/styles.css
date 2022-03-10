@@ -179,7 +179,7 @@ main {
   max-width: 100%;
 }
 
-.flow > * {
+.flow > * ~ * {
   margin-top: 1.5em;
 }
 
