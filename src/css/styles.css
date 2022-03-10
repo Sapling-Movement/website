@@ -124,6 +124,9 @@ h4 {
   h3,
   h4 {
     hyphens: auto;
+  }
+  p,
+  li {
     text-align: justify;
   }
 }
