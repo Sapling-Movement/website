@@ -1,7 +1,10 @@
+const toHtml = require('./src/utils/filters/toHtml');
+
 module.exports = function(config) {
   require('dotenv').config();
 
   config.addPassthroughCopy('src/css');
+  config.addFilter('toHTML', toHtml);
 
   return {
     markdownTemplateEngine: 'njk',

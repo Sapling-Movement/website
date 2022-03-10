@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@portabletext/to-html": "^1.0.3",
     "@sanity/client": "^3.2.0",
     "dotenv": "^16.0.0"
   }
