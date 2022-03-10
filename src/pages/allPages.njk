@@ -8,7 +8,7 @@ pagination:
 permalink: "{{ _data.pageBase.fullSlug }}/index.html"
 eleventyComputed:
   title: "{{ _data.pageBase.title }}"
-  lang: "{{ _data.__lang }}"
+  lang: "{% if not _data.__lang %}de{% else %}{{ _data.__lang }}{% endif %}"
 ---
 
 {{ _data.text | toHTML | safe }}
