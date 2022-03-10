@@ -1,4 +1,4 @@
-const { authenticatedClient, unauthenticatedClient } = require('../utils/sanity');
+const client = require('../utils/sanity');
 const { AssetCache } = require('@11ty/eleventy-cache-assets');
 
 /**
@@ -11,9 +11,9 @@ const { AssetCache } = require('@11ty/eleventy-cache-assets');
 module.exports = async function(cache_id, query, params) {
 
   // if in preview environment, use authenticated client to include document drafts in fetch
-  if (process.env.ELEVENTY_SERVERLESS) {
+  if (process.env.ELEVENTY_SERVERLESS || process.env.NO_CACHE) {
     // fetch from sanity, returns array
-    return await authenticatedClient.fetch(query, params);
+    return await client.fetch(query, params);
   }
 
   // if not in preview enviroment, use cache
@@ -25,7 +25,7 @@ module.exports = async function(cache_id, query, params) {
   }
 
   // otherwise make a new fetch request
-  const response = await unauthenticatedClient.fetch(query, params);
+  const response = await client.fetch(query, params);
   await asset.save(response, "json");
   return response;
 }
