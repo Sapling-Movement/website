@@ -1,0 +1,64 @@
+<header class="main-header">
+  <div class="container">
+    <div class="flex-wrap">
+      {% set home_url = languages[lang].prefix %}
+      <a
+        href="{% if page.url === home_url %}#{% else %}{{ home_url }}{% endif %}"
+        class="logo"
+      >
+        Sapling<br/>Movement
+      </a>
+      <nav class="language-nav">
+        {# todo: implement language switcher #}
+        {# <ul>
+          {%- for lang_key, lang_data in languages -%}
+            {%- for _page in allPages -%}
+              {%- if (_page.data.lang === lang_key) and (_page.data.key === key) -%}
+                <li>
+                  {%- if page.url === _page.data.page.url -%}
+                    {% set current_page = true -%}
+                  {%- endif -%}
+                  {%- if current_page -%}
+                    <span class="as-a">
+                  {%- else -%}
+                    <a
+                      rel="alternate"
+                      hreflang="{{ lang_key }}"
+                      href="{{ _page.data.page.url }}"
+                    >
+                  {%- endif -%}
+                  {{- lang_key -}}
+                  {%- if current_page -%}
+                    </span>
+                  {%- else -%}
+                    </a>
+                  {%- endif -%}
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          {% endfor %}
+        </ul> #}
+      </nav>
+    </div>
+    <nav class="main-nav">
+      <ul class="reel">
+        {% for nav_item in navigation[lang].items %}
+          {% set current_url = nav_item.pageBase.fullSlug %}
+          {% if page.url === current_url %}
+            {% set current_page = true %}
+          {% else %}
+            {% set current_page = false %}
+          {% endif %}
+          <li>
+            <a
+              href="{% if current_page %}#{% else %}{{ current_url }}{% endif %}"
+              {% if current_page %}aria-current="page"{% endif %}
+            >
+              {{ nav_item.pageBase.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
