@@ -20,12 +20,22 @@
   {% endfor %} #}
 </head>
 <body>
-  {% include 'navigation.njk' %}
+  {% include 'components/navigation.njk' %}
   <main class="container">
     <div class="container--narrow flow">
-      <h1>{{ title }}</h1>
+      <h1>
+        {% if _data.pageBase.h1Title %}{{ _data.pageBase.h1Title }}{% else %}{{ title }}{% endif %}
+      </h1>
       {{ content | safe }}
     </div>
+    {% if env == "dev" %}
+    <details>
+      <summary>data</summary>
+      <pre>
+        {{- _data | dump(2) }}
+      </pre>
+    </details>
+    {% endif %}
   </main>
 
   <script>
