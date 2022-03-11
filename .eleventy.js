@@ -1,4 +1,4 @@
-const toHtml = require('./src/utils/filters/toHtml');
+const toHtml = require('./src/utils/filters/toHTML');
 
 module.exports = function(config) {
   require('dotenv').config();
