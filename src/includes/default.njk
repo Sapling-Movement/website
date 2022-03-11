@@ -1,1 +1,3 @@
-{{ _data.text | toHTML | safe }}
+{# {{ _data.text | toHTML | safe }} #}
+
+{% renderHTML _data.text %}

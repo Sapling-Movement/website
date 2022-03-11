@@ -1,6 +1,7 @@
 {% for block in blocks %}
   {% if block._type == 'portableText' %}
-    {{ block.text | toHTML | safe }}
+    {# {{ block.text | toHTML | safe }} #}
+    {% renderHTML block.text %}
   {% elif block._type == 'articleList' %}
     {% include 'components/article-list.njk' %}
   {% endif %}
