@@ -11,7 +11,7 @@ module.exports = function(config) {
     dir: {
       data: 'data',
       input: 'src',
-      includes: 'components',
+      includes: 'includes',
       layouts: 'layouts',
       output: 'dist',
     }

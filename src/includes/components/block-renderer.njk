@@ -1,0 +1,7 @@
+{% for block in blocks %}
+  {% if block._type == 'portableText' %}
+    {{ block.text | toHTML | safe }}
+  {% elif block._type == 'articleList' %}
+    {% include 'components/article-list.njk' %}
+  {% endif %}
+{% endfor %}
