@@ -4,8 +4,11 @@
   "description": "The official Sapling Movement website.",
   "main": "index.html",
   "scripts": {
-    "dev": "rm -rf dist && npx @11ty/eleventy --serve",
-    "dev-nocache": "rm -rf dist && NO_CACHE=true npx @11ty/eleventy --serve",
+    "clean": "rm -rf dist",
+    "dev:11ty": "ENVIRONMENT=dev npx @11ty/eleventy --serve",
+    "dev:11ty-nocache": "NO_CACHE=true ENVIRONMENT=dev npx @11ty/eleventy --serve",
+    "dev": "run-s clean dev:11ty",
+    "dev-nocache": "run-s clean dev:11ty-nocache",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
@@ -32,6 +35,7 @@
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@portabletext/to-html": "^1.0.3",
     "@sanity/client": "^3.2.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "npm-run-all": "^4.1.5"
   }
 }
