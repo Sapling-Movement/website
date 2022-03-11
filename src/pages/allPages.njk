@@ -1,5 +1,5 @@
 ---
-layout: "base.njk"
+layout: base.njk
 pagination:
   data: allPages
   size: 1
@@ -11,11 +11,9 @@ eleventyComputed:
   lang: "{% if not _data.__lang %}de{% else %}{{ _data.__lang }}{% endif %}"
 ---
 
-{{ _data.text | toHTML | safe }}
-
-<details>
-  <summary>data</summary>
-  <pre>
-    {{ _data | dump(2) }}
-  </pre>
-</details>
+{% if _data._type == "modularPage" %}
+  {% set blocks = _data.body %}
+  {% include 'components/block-renderer.njk' %}
+{% elif _data._type == "blogPost" %}
+  {% include 'blog-post.njk' %}
+{% endif %}
