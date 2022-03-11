@@ -1,10 +1,12 @@
-const toHtml = require('./src/utils/filters/toHTML');
+const renderHTML = require('./src/utils/shortcodes/renderHTML');
+const image = require('./src/utils/shortcodes/image');
 
 module.exports = function(config) {
   require('dotenv').config();
 
   config.addPassthroughCopy('src/css');
-  config.addFilter('toHTML', toHtml);
+  config.addNunjucksShortcode('image', image);
+  config.addNunjucksShortcode('renderHTML', renderHTML);
 
   return {
     markdownTemplateEngine: 'njk',
