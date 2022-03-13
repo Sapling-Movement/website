@@ -12,4 +12,4 @@ const client = new sanityClient({
   token: process.env.SANITY_PREVIEW_TOKEN
 });
 
-module.exports = client
+module.exports = client;
