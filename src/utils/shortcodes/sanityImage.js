@@ -3,17 +3,9 @@ const imageUrlBuilder = require('@sanity/image-url');
 
 const builder = imageUrlBuilder(client);
 
-/**
- * 
- * @param {object} param
- * @param {string} param.source - Required: Sanity image object
- * @param {number} param.aspect_ratio - Optional: An aspect ratio in the format 16x9
- * @param {string} param.alt - The alt tag, has to be defined, at least an empty string
- * @param {string} param.sizes - Media query to define, when to load which src
- * @param {string} param.loading - Either `lazy` or `eager`
- * @param {string} param.decoding - Either `sync` or `async`
- */
-module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = '100w', loading = 'lazy', decoding = 'async' }) {
+module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w', loading = 'lazy', decoding = 'async' }) {
+
+  if (alt === undefined) throw new Error('Alt has to be specified')
 
   // get essential data from asset
   const {
@@ -46,12 +38,13 @@ module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = 
         h = Math.round(w / dec_aspect_ratio);
         url = builder.image(source).width(w).height(h).format(f).url();
       } else {
+        h = Math.round(w / _aspect)
         url = builder.image(source).width(w).format(f).url();
       }
       return {
         url,
         w,
-        h: h !== undefined ? h : Math.round(w / _aspect)
+        h
       }
     });
     return {
@@ -84,8 +77,6 @@ module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = 
       height="${img.h}"
     />
   </picture>`;
-
-  console.log(html);
 
   return html;
 }
