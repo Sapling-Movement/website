@@ -42,7 +42,7 @@ module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = 
       let url, h;
       if (aspect_ratio !== undefined) {
         const [aspect_w, aspect_h] = aspect_ratio.split('x');
-        const dec_aspect_ratio = Math.round(aspect_w / aspect_h);
+        const dec_aspect_ratio = aspect_w / aspect_h;
         h = Math.round(w / dec_aspect_ratio);
         url = builder.image(source).width(w).height(h).format(f).url();
       } else {
