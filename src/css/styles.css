@@ -177,6 +177,12 @@ main {
   width: 100ch;
 }
 
+.container img {
+  border-radius: 4px;
+  height: auto;
+  width: 100%;
+}
+
 .container--narrow {
   width: 65ch;
   max-width: 100%;
