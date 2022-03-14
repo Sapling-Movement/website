@@ -8,12 +8,11 @@ const builder = imageUrlBuilder(client);
  * @param {object} param
  * @param {string} param.source - Required: Sanity image object
  * @param {number} param.aspect_ratio - Optional: An aspect ratio in the format 16x9
- * @param {string} alt - The alt tag, has to be defined, at least an empty string
- * @param {string} sizes - Media query to define, which src to load
- * @param {string} loading - Either `lazy` or `eager`
- * @param {string} decoding - Either `sync` or `async`
+ * @param {string} param.alt - The alt tag, has to be defined, at least an empty string
+ * @param {string} param.sizes - Media query to define, when to load which src
+ * @param {string} param.loading - Either `lazy` or `eager`
+ * @param {string} param.decoding - Either `sync` or `async`
  */
-
 module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = '100w', loading = 'lazy', decoding = 'async' }) {
 
   // get essential data from asset
@@ -40,11 +39,19 @@ module.exports = function sanityImage({ source, aspect_ratio, alt = '', sizes = 
   // generate sources
   const sources = Object.keys(formats).map(f => {
     const _sources = widths.map(w => {
-      const url = builder.image(source).width(w).format(f).url();
+      let url, h;
+      if (aspect_ratio !== undefined) {
+        const [aspect_w, aspect_h] = aspect_ratio.split('x');
+        const dec_aspect_ratio = Math.round(aspect_w / aspect_h);
+        h = Math.round(w / dec_aspect_ratio);
+        url = builder.image(source).width(w).height(h).format(f).url();
+      } else {
+        url = builder.image(source).width(w).format(f).url();
+      }
       return {
         url,
         w,
-        h: Math.round(w / _aspect)
+        h: h !== undefined ? h : Math.round(w / _aspect)
       }
     });
     return {
