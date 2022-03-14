@@ -4,7 +4,7 @@ const sanityImage = require('./sanityImage');
 
 const blocks = {
   types: {
-    imageWithCaption: ({ value: { image } }) => {
+    imageWithCaption: ({ value: { image,  } }) => {
       // const {
       //   width,
       //   height
@@ -17,7 +17,7 @@ const blocks = {
       //   height
       // });
       // return imageHTML;
-      return sanityImage({ source: image });
+      return sanityImage({ source: image, alt: image.alt, aspect_ratio: image.aspectRatio });
     }
   }
 }
