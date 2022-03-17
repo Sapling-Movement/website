@@ -6,6 +6,7 @@ module.exports = function(config) {
   require('dotenv').config();
 
   config.addPassthroughCopy('src/css');
+  config.addPassthroughCopy({ 'src/public': './'});
   config.addNunjucksShortcode('image', image);
   config.addNunjucksShortcode('renderHTML', renderHTML);
   config.addNunjucksShortcode('sanityImage', sanityImage);
