@@ -199,11 +199,16 @@ main {
   justify-content: space-between;
 }
 
-.logo {
-  color: var(--base-color1-dark);
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.1;
+.main-header a.logo {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.main-header a.logo svg {
+  height: auto;
+  margin: -0.25rem -0.75rem;
+  width: 320px;
 }
 
 .main-header .container > * {

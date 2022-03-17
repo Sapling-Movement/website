@@ -1,12 +1,12 @@
+{% set home_url = languages[lang].prefix %}
 <header class="main-header">
   <div class="container">
     <div class="flex-wrap">
-      {% set home_url = languages[lang].prefix %}
       <a
         href="{% if page.url === home_url %}#{% else %}{{ home_url }}{% endif %}"
         class="logo"
       >
-        Sapling<br/>Movement
+        {% include 'logo.svg' %}
       </a>
       <nav class="language-nav">
         {# todo: implement language switcher #}
