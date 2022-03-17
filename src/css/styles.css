@@ -209,6 +209,7 @@ main {
   height: auto;
   margin: -0.25rem -0.75rem;
   width: 320px;
+  max-width: 100%;
 }
 
 .main-header .container > * {
