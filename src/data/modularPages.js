@@ -5,6 +5,17 @@ module.exports = function() {
     ...,
     body[]{
       ...,
+      _type == "heroSection" => @{
+        ...,
+        backgroundImage {
+          ...,
+          asset->
+        },
+        overlay {
+          ...,
+          asset->
+        }
+      },
       _type == "portableText" => @{
         text[] {
           ...,
