@@ -1,7 +1,7 @@
 const fetchFromSanity = require('../utils/fetchFromSanity');
 
 module.exports = function() {
-  const query = `*[_type == "blogPost" && $includeDrafts]{
+  const query = `*[_type == "blogPost" __EXCLUDE_DRAFTS__]{
     ...,
     text[] {
       ...,

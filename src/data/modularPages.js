@@ -1,7 +1,7 @@
 const fetchFromSanity = require('../utils/fetchFromSanity');
 
 module.exports = function() {
-  const query = `*[_type == "modularPage" && $includeDrafts]{
+  const query = `*[_type == "modularPage" __EXCLUDE_DRAFTS__]{
     ...,
     body[]{
       ...,
