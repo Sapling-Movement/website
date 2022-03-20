@@ -1,14 +1,15 @@
+require('dotenv').config();
 const renderHTML = require('./src/utils/shortcodes/renderHTML');
 const image = require('./src/utils/shortcodes/image');
 const sanityImage = require('./src/utils/shortcodes/sanityImage');
 
 module.exports = function(config) {
-  require('dotenv').config();
 
   config.addPassthroughCopy({ 'src/public': './'});
   config.addNunjucksShortcode('image', image);
   config.addNunjucksShortcode('renderHTML', renderHTML);
   config.addNunjucksShortcode('sanityImage', sanityImage);
+  config.addWatchTarget("src/css");
 
   return {
     markdownTemplateEngine: 'njk',
