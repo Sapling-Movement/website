@@ -5,7 +5,6 @@ const sanityImage = require('./src/utils/shortcodes/sanityImage');
 module.exports = function(config) {
   require('dotenv').config();
 
-  config.addPassthroughCopy('src/css');
   config.addPassthroughCopy({ 'src/public': './'});
   config.addNunjucksShortcode('image', image);
   config.addNunjucksShortcode('renderHTML', renderHTML);
@@ -13,6 +12,7 @@ module.exports = function(config) {
 
   return {
     markdownTemplateEngine: 'njk',
+    templateFormats: ['njk', '11ty.js'],
     dir: {
       data: 'data',
       input: 'src',
