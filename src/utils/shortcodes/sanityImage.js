@@ -3,9 +3,9 @@ const imageUrlBuilder = require('@sanity/image-url');
 
 const builder = imageUrlBuilder(client);
 
-module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w', loading = 'lazy', decoding = 'async' }) {
+module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w', loading = 'lazy', decoding = 'async', cssClass = '' }) {
 
-  if (alt === undefined) throw new Error('Alt has to be specified')
+  if (alt === undefined) throw new Error('Alt has to be specified');
 
   // get essential data from asset
   const {
@@ -58,7 +58,7 @@ module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w
   const img = sources[sources.length - 1].srcs[0];
 
   const html = `
-  <picture>
+  <picture class="${cssClass}">
     ${sources.map(_s => {
       return `
         <source
