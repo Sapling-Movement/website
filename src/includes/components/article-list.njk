@@ -1,11 +1,11 @@
-{% if block.loadAll %}
+{% if _block.loadAll %}
   {% set articles = blogPosts %}
 {% endif %}
-<ul>
+<ul class="flow">
   {% for article in articles %}
     {% if article.__lang == lang %}
     <li>
-      <p class="as-h2">{{ article.pageBase.title }}</p>
+      <p class="as-h2"><b>{{ article.pageBase.title }}</b></p>
       <p>{{ article.pageBase.description }}</p>
       <a href="{{ article.pageBase.fullSlug }}" class="breakout-button">
         {{ translations['readArticle'][lang] }}
