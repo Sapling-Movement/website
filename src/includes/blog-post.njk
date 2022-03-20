@@ -1,5 +1,7 @@
-by author:
-
-{# {{ _data.text | toHTML | safe }} #}
-
-{% renderHTML _data.text %}
+<div class="container">
+  <div class="container--narrow flow">
+    <h1>{{ title }}</h1>
+    by author:
+    {% renderHTML _data.text %}
+  </div>
+</div>

@@ -1,8 +1,19 @@
-{% for block in blocks %}
-  {% if block._type == 'portableText' %}
-    {# {{ block.text | toHTML | safe }} #}
-    {% renderHTML block.text %}
-  {% elif block._type == 'articleList' %}
-    {% include 'components/article-list.njk' %}
-  {% endif %}
-{% endfor %}
+<div class="flow">
+  {% for _block in blocks %}
+    {% if _block._type == 'heroSection' %}
+      {% include 'components/hero-section.njk' %}
+    {% elif _block._type == 'portableText' %}
+      <div class="container">
+        <div class="container--narrow flow">
+          {% renderHTML _block.text %}
+        </div>
+      </div>
+    {% elif _block._type == 'articleList' %}
+      <div class="container">
+        <div class="container--narrow flow">
+          {% include 'components/article-list.njk' %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
