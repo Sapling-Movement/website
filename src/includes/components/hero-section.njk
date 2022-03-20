@@ -1,0 +1,30 @@
+{% set source = _block.backgroundImage %}
+
+<section class="hero-section">
+  <div class="pin">
+    <div class="container hero-section__content hero-section__content--{{ _block.layout }}">
+      {% if _block.overlay %}
+        <img
+          alt=""
+          class="hero-section__overlay-vector"
+          src="{{ _block.overlay.asset.url }}"
+          width="{{ _block.overlay.asset.metadata.dimensions.width }}"
+          height="{{ _block.overlay.asset.metadata.dimensions.height }}"
+        >
+      {% endif %}
+      {% if _block.title %}
+        <h1>{{ _block.title }}</h1>
+      {% endif %}
+      {% if _block.subtitle %}
+        <p class="as-h2">{{ subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+  {%
+    sanityImage
+    source=_block.backgroundImage,
+    alt="",
+    aspect_ratio="26x9",
+    cssClass="hero-section__background-image"
+  %}
+</section>
