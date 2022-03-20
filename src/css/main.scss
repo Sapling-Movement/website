@@ -3,8 +3,13 @@
 @use 'global';
 @use 'typography';
 
+@use 'components/hero-section';
 @use 'components/main-header';
 
 @use 'utils/container';
 @use 'utils/flex-wrap';
 @use 'utils/flow';
+@use 'utils/full-width';
+@use 'utils/pin';
+@use 'utils/reel';
+@use 'utils/rounded-corners';
