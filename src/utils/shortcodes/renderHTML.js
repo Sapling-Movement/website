@@ -17,7 +17,12 @@ const blocks = {
       //   height
       // });
       // return imageHTML;
-      return sanityImage({ source: image, alt: image.alt, aspect_ratio: image.aspectRatio });
+      return sanityImage({
+        source: image,
+        alt: image.alt,
+        aspect_ratio: image.aspectRatio,
+        cssClass: 'full-width rounded-corners'
+      });
     }
   }
 }
