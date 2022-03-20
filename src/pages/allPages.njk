@@ -5,7 +5,10 @@ pagination:
   size: 1
   resolve: values
   alias: _data
-permalink: "{{ _data.pageBase.fullSlug }}/index.html"
+  serverless: eleventy.serverless.path.id
+permalink:
+  build: "{{ _data.pageBase.fullSlug }}/index.html"
+  dynamic: /preview/:id/
 eleventyComputed:
   title: "{{ _data.pageBase.title }}"
   lang: "{% if not _data.__lang %}de{% else %}{{ _data.__lang }}{% endif %}"
