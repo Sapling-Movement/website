@@ -1,0 +1,64 @@
+.main-header a.logo {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.main-header a.logo svg {
+  height: auto;
+  margin: -0.25rem -0.75rem;
+  width: 320px;
+  max-width: 100%;
+}
+
+.main-header .container > * {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.main-header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header .language-nav li > * {
+  padding: 0.125rem;
+}
+
+.main-header .language-nav li ~ *::before {
+  content: "|";
+}
+
+.main-header a,
+.main-header *.as-a {
+  border-width: 0.125rem;
+  border-color: transparent;
+  border-style: dashed;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.main-header .language-nav a,
+.main-header .language-nav *.as-a {
+  border: none;
+  text-decoration-color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+.main-header .language-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-header a:hover,
+.main-header a:focus,
+.main-header a:focus-visible,
+.main-header a:focus-within {
+  border-color: inherit;
+}
+
+.main-header nav.main-nav {
+  margin-right: -2rem;
+}

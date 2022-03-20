@@ -1,0 +1,16 @@
+:root {
+  --base-color1: 60;
+  --base-color2: 340;
+
+  --base-color1-lighter: hsla(var(--base-color1), 50%, 85%, 100%);
+  --base-color1-light: hsla(var(--base-color1), 50%, 75%, 100%);
+  --base-color1-normal: hsla(var(--base-color1), 50%, 50%, 100%);
+  --base-color1-dark: hsla(var(--base-color1), 50%, 35%, 100%);
+  --base-color1-darker: hsla(var(--base-color1), 50%, 25%, 100%);
+
+  --base-color2-lighter: hsla(var(--base-color2), 50%,85%, 100%);
+  --base-color2-light: hsla(var(--base-color2), 50%, 75%, 100%);
+  --base-color2-normal: hsla(var(--base-color2), 50%, 50%, 100%);
+  --base-color2-dark: hsla(var(--base-color2), 50%, 35%, 100%);
+  --base-color2-darker: hsla(var(--base-color2), 50%, 25%, 100%);
+}
