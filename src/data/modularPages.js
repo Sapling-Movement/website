@@ -1,7 +1,7 @@
 const fetchFromSanity = require('../utils/fetchFromSanity');
 
 module.exports = function() {
-  const query = `*[_type == "modularPage" && !(_id in path("drafts.**"))]{
+  const query = `*[_type == "modularPage" && $includeDrafts]{
     ...,
     body[]{
       ...,
@@ -29,6 +29,6 @@ module.exports = function() {
       }
     }
   }`;
-  const params = '';
+  const params = {};
   return fetchFromSanity('modular-page', query, params);
 }

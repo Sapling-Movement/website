@@ -1,7 +1,7 @@
 const fetchFromSanity = require('../utils/fetchFromSanity');
 
 module.exports = function() {
-  const query = `*[_type == "blogPost" && !(_id in path("drafts.**"))]{
+  const query = `*[_type == "blogPost" && $includeDrafts]{
     ...,
     text[] {
       ...,
@@ -13,6 +13,6 @@ module.exports = function() {
       }
     }
   }`;
-  const params = '';
+  const params = {};
   return fetchFromSanity('blog-post', query, params);
 }

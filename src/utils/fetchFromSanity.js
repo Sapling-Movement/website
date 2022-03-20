@@ -10,10 +10,16 @@ const { AssetCache } = require('@11ty/eleventy-cache-assets');
 
 module.exports = async function(cache_id, query, params) {
 
+  let _params = params;
+
+  // exclude drafts if not in serverless env
+  _params.includeDrafts = process.env.ELEVENTY_SERVERLESS ? true : '!(_id in path("drafts.**"))' 
+
+
   // if in preview environment, use authenticated client to include document drafts in fetch
   if (process.env.ELEVENTY_SERVERLESS || process.env.NO_CACHE) {
     // fetch from sanity, returns array
-    return await client.fetch(query, params);
+    return await client.fetch(query, _params);
   }
 
   // if not in preview enviroment, use cache
@@ -25,7 +31,7 @@ module.exports = async function(cache_id, query, params) {
   }
 
   // otherwise make a new fetch request
-  const response = await client.fetch(query, params);
+  const response = await client.fetch(query, _params);
   await asset.save(response, "json");
   return response;
 }
