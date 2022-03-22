@@ -2,6 +2,9 @@ const { toHTML } = require('@portabletext/to-html');
 const generateImage = require('./image');
 const sanityImage = require('./sanityImage');
 
+const serializers = {
+}
+
 const blocks = {
   types: {
     imageWithCaption: ({ value: { image,  } }) => {
@@ -24,6 +27,14 @@ const blocks = {
         cssClass: 'full-width rounded-corners'
       });
     }
+  },
+  marks: {
+    internalLink: ({ value, children }) => `
+      <a href="${value.slug}">${children}</a>
+    `,
+    externalLink: ({ value, children }) => `
+      <a href="${value.href}" target="_blank" rel="noreferrer,noopener,nofollow">${children}</a>
+    `
   }
 }
 

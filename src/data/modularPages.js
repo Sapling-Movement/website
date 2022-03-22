@@ -24,7 +24,13 @@ module.exports = function() {
               ...,
               asset->
             }
-          } 
+          },
+          markDefs[]{
+            ...,
+            _type == "internalLink" => {
+              "slug": @.reference->pageBase.fullSlug
+            }
+          }
         }
       }
     }
