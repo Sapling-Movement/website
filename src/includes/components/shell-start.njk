@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/favicon.svg">
+  {#- {% for lang_key, lang_data in languages %}
+    {% for _page in collections.all %}
+      {% if (_page.data.lang === lang_key) and (_page.data.key === key) %}
+        <link
+          rel="alternate"
+          hreflang="{{ lang_key }}"
+          href="{{ production_url }}{{ _page.data.page.url }}"
+        />
+      {% endif %}
+    {% endfor %}
+  {% endfor %} -#}
+</head>
+<body>
+  {%- include 'components/navigation.njk' -%}
+  <main>

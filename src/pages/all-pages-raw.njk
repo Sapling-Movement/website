@@ -1,0 +1,18 @@
+---
+pagination:
+  data: allPages
+  size: 1
+  resolve: values
+  alias: _data
+permalink: "{{ _data.pageBase.fullSlug }}/index.content.html"
+eleventyComputed:
+  title: "{{ _data.pageBase.title }}"
+  lang: "{% if not _data.__lang %}de{% else %}{{ _data.__lang }}{% endif %}"
+---
+
+{% if _data._type == "modularPage" %}
+  {% set blocks = _data.body %}
+  {% include 'components/block-renderer.njk' %}
+{% elif _data._type == "blogPost" %}
+  {% include 'blog-post.njk' %}
+{% endif %}

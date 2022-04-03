@@ -1,0 +1,11 @@
+---
+isShell: true
+pagination:
+  data: languages
+  size: 1
+  alias: _data
+permalink: "shell-start-{{ _data }}.html"
+eleventyComputed:
+  lang: "{{ _data }}"
+---
+{% include 'components/shell-start.njk' %}
