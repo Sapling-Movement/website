@@ -1,0 +1,24 @@
+.vector-icon {
+  & > :first-child {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  & > :last-child {
+    margin-top: 1.5rem;
+  }
+  @media screen and (max-width: 808px) {
+    & > :first-child {
+      img {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+      }
+    }
+    & > :last-child {
+      margin: unset;
+    } 
+  }
+}

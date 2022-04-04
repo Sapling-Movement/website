@@ -16,6 +16,13 @@ module.exports = function() {
           asset->
         }
       },
+      _type == "vectorText" => @{
+        ...,
+        vectorIcon {
+          ...,
+          asset->
+        }
+      },
       _type == "portableText" => @{
         text[] {
           ...,

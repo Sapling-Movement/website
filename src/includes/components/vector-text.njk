@@ -1,0 +1,14 @@
+{% set source = _block.vectorIcon %}
+<div class="with-sidebar vector-icon">
+  <div>
+    <img
+      src="{{ source.asset.url }}"
+      loading="lazy"
+      width="{{ source.asset.metadata.dimensions.width }}"
+      height="{{ source.asset.metadata.dimensions.height }}"
+    />
+  </div>
+  <div class="flow">
+    {% renderHTML _block.portableText.text %}
+  </div>
+</div>

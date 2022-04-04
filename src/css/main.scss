@@ -5,6 +5,7 @@
 
 @use 'components/hero-section';
 @use 'components/main-header';
+@use 'components/vector-text';
 
 @use 'utils/container';
 @use 'utils/flex-wrap';
@@ -13,3 +14,4 @@
 @use 'utils/pin';
 @use 'utils/reel';
 @use 'utils/rounded-corners';
+@use 'utils/with-sidebar';

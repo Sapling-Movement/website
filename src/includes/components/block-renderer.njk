@@ -1,4 +1,4 @@
-<div class="flow">
+<div class="flow flow--extra">
   {% for _block in blocks %}
     {% if _block._type == 'heroSection' %}
       {% include 'components/hero-section.njk' %}
@@ -13,6 +13,10 @@
         <div class="container--narrow flow">
           {% include 'components/article-list.njk' %}
         </div>
+      </div>
+    {% elif _block._type == 'vectorText' %}
+      <div class="container">
+        {% include 'components/vector-text.njk' %}
       </div>
     {% endif %}
   {% endfor %}

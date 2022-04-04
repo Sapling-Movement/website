@@ -1,3 +1,8 @@
-.flow > * ~ * {
-  margin-top: 1.5em;
+.flow {
+  > * ~ * {
+    margin-top: 1.5em;
+  }
+  &--extra > * ~ * {
+    margin-top: 3rem;
+  }  
 }
