@@ -9,45 +9,41 @@
         {% include 'logo.svg' %}
       </a>
       <nav class="language-nav">
-        {# todo: implement language switcher #}
-        {# <ul>
-          {%- for lang_key, lang_data in languages -%}
-            {%- for _page in allPages -%}
-              {%- if (_page.data.lang === lang_key) and (_page.data.key === key) -%}
-                <li>
-                  {%- if page.url === _page.data.page.url -%}
-                    {% set current_page = true -%}
-                  {%- endif -%}
-                  {%- if current_page -%}
-                    <span class="as-a">
-                  {%- else -%}
-                    <a
-                      rel="alternate"
-                      hreflang="{{ lang_key }}"
-                      href="{{ _page.data.page.url }}"
-                    >
-                  {%- endif -%}
-                  {{- lang_key -}}
-                  {%- if current_page -%}
-                    </span>
-                  {%- else -%}
-                    </a>
-                  {%- endif -%}
-                </li>
-              {%- endif -%}
-            {%- endfor -%}
-          {% endfor %}
-        </ul> #}
         <ul>
-          <li><a href="/">DE</a></li>
-          <li><a href="/en/">EN</a></li>
+          {% for lang_key, lang_data in languages %}
+            <li>
+              {%- if lang === lang_key -%}
+                {%- set current_page = true -%}
+                {%- set target_url = page.url -%}
+              {%- else -%}
+                {%- set current_page = false -%}
+                {%- set id = languageMaps[lang][_data._id][lang_key] -%}
+                {%- set target_url = allPages[id].pageBase.fullSlug -%}
+              {%- endif -%}
+              {%- if current_page -%}
+                <span class="as-a">
+              {%- else -%}
+                <a
+                  rel="alternate"
+                  hreflang="{{ lang_key }}"
+                  href="{{ target_url }}"
+                >
+              {%- endif -%}
+              {{- lang_key -}}
+              {%- if current_page -%}
+                </span>
+              {%- else -%}
+                </a>
+              {%- endif -%}
+            </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
     <nav class="main-nav">
       <ul class="reel">
         {% for nav_item in navigation[lang].items %}
-          {% set current_url = nav_item.pageBase.fullSlug %}
+          {% set current_url = nav_item.fullSlug %}
           {% if page.url === current_url %}
             {% set current_page = true %}
           {% else %}
@@ -58,7 +54,7 @@
               href="{% if current_page %}#{% else %}{{ current_url }}{% endif %}"
               {% if current_page %}aria-current="page"{% endif %}
             >
-              {{ nav_item.pageBase.title }}
+              {{ nav_item.title }}
             </a>
           </li>
         {% endfor %}
