@@ -1,21 +1,16 @@
 const fetchFromSanity = require('../utils/fetchFromSanity');
+const arrayToObject = require('../utils/arrayToObject');
 
 module.exports = async function() {
-  const query = `*[
-      _type == "navigation"
-      && __lang == $lang
-      && !(_id in path("drafts.i18n.*")
-      && _id in path("i18n.**"))
-    ]{
-      items[]->{
-        __lang,
-        pageBase
-      }
-  }[0]`;
-  const navDE = await fetchFromSanity('navigationDE', query, {lang: 'de'});
-  const navEN = await fetchFromSanity('navigationDE', query, {lang: 'en'});
-  return {
-    de: navDE,
-    en: navEN
-  }
+  const query = `*[_type == "navigation" __EXCLUDE_DRAFTS__]{
+    'lang': __lang,
+    items[]->{
+      'fullSlug': pageBase.fullSlug,
+      'title': pageBase.title
+    }
+  }`;
+
+  const navigation = await fetchFromSanity('navigation', query);
+
+  return arrayToObject(navigation, 'lang');
 }
