@@ -32,7 +32,7 @@ module.exports = async function(cache_id, query, params) {
     return asset.getCachedValue();
   }
 
-  console.log(_query);
+  // console.log(_query);
 
   // otherwise make a new fetch request
   const response = await client.fetch(_query, params);

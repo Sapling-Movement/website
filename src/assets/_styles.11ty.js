@@ -8,7 +8,7 @@ const isProd = process.env.ELEVENTY_ENV === 'production';
 module.exports = class {
   async data() {
     const entryPath = path.join(__dirname, '../css/main.scss');
-    console.log(entryPath);
+    // console.log(entryPath);
     return {
       permalink: '/css/main.css',
       eleventyExcludeFromCollections: true,
