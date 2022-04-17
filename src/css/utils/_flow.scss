@@ -6,3 +6,13 @@
     margin-top: 3rem;
   }  
 }
+
+$spaces: 3xs, 2xs, xs, s, m, l, xl, 2xl, 3xl;
+
+.flow {
+  @each $space in $spaces{
+    &--#{$space} > *~* {
+      margin-top: var(--space-#{$space})
+    }
+  }
+}
