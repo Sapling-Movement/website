@@ -18,7 +18,7 @@ module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w
   } = source.asset;
 
   // define widths for output
-  let widths = [320, 400, 700, 1200, 2000];
+  let widths = [100, 320, 400, 700, 1200, 2000];
 
   // filter out widths that are smaller than the actual image
   widths = widths.filter(w => w <= _w);
