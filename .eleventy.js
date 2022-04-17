@@ -1,5 +1,6 @@
 require('dotenv').config();
-const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
+const { EleventyServerlessBundlerPlugin } = require('@11ty/eleventy');
+const filterArticles = require('./src/utils/filters/filterArticles');
 const renderHTML = require('./src/utils/shortcodes/renderHTML');
 const image = require('./src/utils/shortcodes/image');
 const sanityImage = require('./src/utils/shortcodes/sanityImage');
@@ -7,6 +8,7 @@ const sanityImage = require('./src/utils/shortcodes/sanityImage');
 module.exports = function(config) {
 
   config.addPassthroughCopy({ 'src/public': './'});
+  config.addNunjucksFilter('filterArticles', filterArticles);
   config.addNunjucksShortcode('image', image);
   config.addNunjucksShortcode('renderHTML', renderHTML);
   config.addNunjucksShortcode('sanityImage', sanityImage);
