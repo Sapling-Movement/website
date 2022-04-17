@@ -1,0 +1,38 @@
+@use '../typography';
+@use 'rounded-corners';
+
+.breakout-button {
+  @extend .uppercase;
+  @extend .rounded-corners;
+  align-items: center;
+  // background-color: var(--base-color2-dark);
+  box-shadow: 0 0 0 2px var(--base-color2-dark);
+  color: var(--base-color2-darker);
+  display: inline-flex;
+  padding: var(--space-3xs) var(--space-m);
+  position: static;
+  text-decoration: none;
+  transition: 500ms ease;
+
+  &-parent {
+    position: relative;
+
+    &:hover,
+    &:focus-within {
+      & .breakout-button--underlined {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
