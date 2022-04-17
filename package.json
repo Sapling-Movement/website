@@ -5,10 +5,11 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm -rf dist",
+    "clean-all": "rm -rf dist .cache",
     "dev:11ty": "ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "dev:11ty-nocache": "NO_CACHE=true ENVIRONMENT=dev npx @11ty/eleventy --serve",
     "dev": "run-s clean dev:11ty",
-    "dev-nocache": "run-s clean dev:11ty-nocache",
+    "dev-nocache": "run-s clean-all dev:11ty-nocache",
     "build": "npx @11ty/eleventy"
   },
   "repository": {
