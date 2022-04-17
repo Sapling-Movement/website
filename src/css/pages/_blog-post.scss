@@ -1,0 +1,13 @@
+.blog-post {
+  & .author-image {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--base-color1-dark);
+
+    &,
+    & img {
+      flex-grow: 0;
+      flex-shrink: 0;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

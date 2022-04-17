@@ -1,7 +1,40 @@
-<div class="container">
-  <div class="container--narrow flow">
+<div class="container blog-post">
+  <div class="container--narrow flow--l">
     <h1>{{ title }}</h1>
-    by author:
-    {% renderHTML _data.portableText.text %}
+    <div class="grid grid--narrow">
+      {% if _data.author %}
+        <div class="flow--xs">
+          <p class="uppercase">{{ translations['writtenBy'][lang] }}</p>
+          <div class="flex-wrap flex-wrap--gap">
+            {%
+              sanityImage
+              source=_data.author.image,
+              alt="",
+              aspect_ratio="1x1",
+              cssClass="author-image circle"
+            %}
+            <p>{{ _data.author.firstName }}</p>
+          </div>
+        </div>
+      {% endif %}
+      {% if _data.categories %}
+        <div class="categories flow--xs">
+          <p class="uppercase">{{ translations['publishedIn'][lang] }}</p>
+          <div>
+            <ul class="pills">
+              {% for category in _data.categories %}
+                <li><a href="{{ category.pageBase.fullSlug }}">
+                  {{ category.pageBase.title }}
+                </a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="flow">
+      <p><b>{{ _data.pageBase.description }}</b></p>
+      {% renderHTML _data.portableText.text %}
+    </div>
   </div>
 </div>

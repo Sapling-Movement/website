@@ -1,0 +1,23 @@
+@use './flex-wrap';
+
+.pills {
+  @extend .flex-wrap;
+  @extend .flex-wrap--gap;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    border-radius: 40px;
+    background-color: var(--base-color2-normal);
+    
+    a {
+      color: white;
+      display: block;
+      font-size: 0.75em;
+      padding: var(--space-3xs) var(--space-xs);
+      text-decoration: none;
+    }
+  }
+}
