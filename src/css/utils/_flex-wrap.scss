@@ -2,5 +2,12 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  &--space-between {
+    justify-content: space-between;
+  }
+
+  &--gap {
+    gap: 1em;
+  }
 }
