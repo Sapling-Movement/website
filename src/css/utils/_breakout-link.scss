@@ -1,0 +1,23 @@
+.breakout-link {
+  position: static;
+  text-decoration: none;
+
+  &-parent {
+    position: relative;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
