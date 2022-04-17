@@ -3,11 +3,13 @@ const arrayToObject = require('../utils/arrayToObject.js');
 module.exports = async function() {
 
   // require pages
+  const categories = await require('./categories.js')();
   const modularPages = await require('./modularPages.js')();
   const blogPosts = await require('./blogPosts.js')();
 
   // merge pages into single array
   const arrAllPages = [
+    ...categories,
     ...modularPages,
     ...blogPosts
   ];
