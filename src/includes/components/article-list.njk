@@ -1,15 +1,22 @@
 {% if _block.loadAll %}
   {% set articles = blogPosts %}
 {% endif %}
-<ul class="flow">
+<ul class="flow flow--xl article-list">
   {% for article in articles %}
     {% if article.__lang == lang %}
-    <li>
-      <p class="as-h2"><b>{{ article.pageBase.title }}</b></p>
-      <p>{{ article.pageBase.description }}</p>
-      <a href="{{ article.pageBase.fullSlug }}" class="breakout-button">
-        {{ translations['readArticle'][lang] }}
-      </a>
+    <li class="breakout-link-parent">
+      <article class="article-item">
+        <div class="flow flow--s">
+          <div class="flow flow--xs">
+            <a href="{{ article.pageBase.fullSlug }}" class="as-h2 breakout-link">
+              {{ article.pageBase.title }}
+            </a>
+            {# <p class="as-h2 breakout-link"><b>{{ article.pageBase.title }}</b></p> #}
+            <p>{{ article.pageBase.description }}</p>
+          </div>
+          
+        </div>
+      </article>
     </li>
     {% endif %}
   {% endfor %}
