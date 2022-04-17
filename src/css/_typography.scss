@@ -3,6 +3,7 @@
   src: url('/fonts/SourceSerif4-Bold.otf.woff2') format('woff2'),
        url('/fonts/SourceSerif4-Bold.otf.woff') format('woff');
   font-weight: 700;
+  font-display: swap;
 }
 
 body {
@@ -14,7 +15,10 @@ li,
 h1,
 h2,
 h3,
-h4 {
+h4,
+.as-h1,
+.as-h2,
+.as-h3 {
   overflow-wrap: break-word;
   font-size: clamp(
     var(--fluid-type-min, 1rem),
@@ -25,41 +29,20 @@ h4 {
 
 @supports(hyphens: auto) {
   p,
+  li {
+    text-align: justify;
+  }
+  p,
   li,
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  .as-h1,
+  .as-h2,
+  .as-h3 {
     hyphens: auto;
   }
-  p,
-  li {
-    text-align: justify;
-  }
-}
-
-h1,
-h2,
-h3 {
-  font-display: swap;
-  font-family: 'Source Serif Pro', serif;
-  line-height: 1.1;
-}
-
-h1 {
-  --fluid-type-min: 1.5rem;
-  --fluid-type-max: 3rem;
-  --fluid-type-target: 4vw;
-}
-
-h2 {
-  --fluid-type-min: 1rem;
-  --fluid-type-max: 2rem;
-}
-
-h3 {
-  --fluid-type-min: 0.75rem;
-  --fluid-type-max: 1.5rem;
 }
 
 p {
@@ -70,4 +53,40 @@ p {
 
 a {
   color: var(--base-color1-darker);
+}
+
+h1,
+h2,
+h3,
+.as-h1,
+.as-h2,
+.as-h3 {
+  font-family: 'Source Serif Pro', serif;
+  line-height: 1.1;
+}
+
+h1,
+.as-h1 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 3rem;
+  --fluid-type-target: 4vw;
+}
+
+h2,
+.as-h2 {
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 2rem;
+  --fluid-type-target: 3vw;
+}
+
+h3,
+.as-h3 {
+  --fluid-type-min: 0.75rem;
+  --fluid-type-max: 1.5rem;
+  --fluid-type-target: 2vw;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  font-size: 0.75em;
 }
