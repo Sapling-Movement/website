@@ -1,0 +1,6 @@
+{% set articles = (blogPosts | filterArticles(_data.pageBase.title)) %}
+<div class="container">
+  <div class="container--narrow flow">
+    {% include 'components/article-list.njk' %}
+  </div>
+</div>

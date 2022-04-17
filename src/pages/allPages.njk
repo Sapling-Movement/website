@@ -16,4 +16,6 @@ eleventyComputed:
   {% include 'components/block-renderer.njk' %}
 {% elif _data._type == "blogPost" %}
   {% include 'blog-post.njk' %}
+{% elif _data._type == "category" %}
+  {% include 'category-page.njk' %}
 {% endif %}
