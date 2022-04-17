@@ -5,7 +5,7 @@ let languages = require('./languages.json');
 
 module.exports = async function() {
 
-  const query = `*[_type in ['modularPage','blogPost']]{_id}`;
+  const query = `*[_type in ['modularPage','blogPost','category']]{_id}`;
   const params = {};
   let docs = await fetchFromSanity('language-maps', query, params);
 
