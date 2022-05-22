@@ -17,6 +17,8 @@ module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w
     }
   } = source.asset;
 
+  const caption = source.caption;
+
   // define widths for output
   let widths = [100, 320, 400, 700, 1200, 2000];
 
@@ -58,25 +60,26 @@ module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w
   const img = sources[sources.length - 1].srcs[0];
 
   const html = `
-  <picture class="${cssClass}">
-    ${sources.map(_s => {
-      return `
-        <source
-          type="${_s.mimetype}"
-          srcset="${_s.srcsets}"
-          sizes="${sizes}"
-        />
-      `
-    }).join('')}
-    <img
-      alt="${alt}"
-      loading="${loading}"
-      decoding="${decoding}"
-      src="${img.url}"
-      width="${img.w}"
-      height="${img.h}"
-    />
-  </picture>`;
-
+  ${caption !== undefined ? `<figure>` : ''}
+    <picture class="${cssClass}">
+      ${sources.map(_s => {
+        return `
+          <source
+            type="${_s.mimetype}"
+            srcset="${_s.srcsets}"
+            sizes="${sizes}"
+          />
+        `
+      }).join('')}
+      <img
+        alt="${alt}"
+        loading="${loading}"
+        decoding="${decoding}"
+        src="${img.url}"
+        width="${img.w}"
+        height="${img.h}"
+      />
+    </picture>
+  ${caption !== undefined ? `<figcaption>${caption}</figcaption></figure>` : null}`;
   return html;
 }
