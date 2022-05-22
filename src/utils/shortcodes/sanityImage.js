@@ -80,6 +80,6 @@ module.exports = function sanityImage({ source, alt, aspect_ratio, sizes = '100w
         height="${img.h}"
       />
     </picture>
-  ${caption !== undefined ? `<figcaption>${caption}</figcaption></figure>` : null}`;
+  ${caption !== undefined ? `<figcaption>${caption}</figcaption></figure>` : ''}`;
   return html;
 }
