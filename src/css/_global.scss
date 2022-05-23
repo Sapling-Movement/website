@@ -2,3 +2,20 @@ main {
   margin-top: 3rem;
   margin-bottom: 6rem;
 }
+
+blockquote {
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-m);
+  position: relative;
+
+  &::before {
+    background-color: var(--base-color1-light);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: var(--space-3xs);
+  }
+}
