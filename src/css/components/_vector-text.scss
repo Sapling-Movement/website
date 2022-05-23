@@ -6,7 +6,11 @@
     }
   }
   & > :last-child {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
+
+    & > :first-child {
+      margin-top: 0;
+    }
   }
   @media screen and (max-width: 808px) {
     & > :first-child {

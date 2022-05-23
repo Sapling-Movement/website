@@ -1,5 +1,8 @@
 .flow {
   > * ~ * {
+    margin-top: 1.2em;
+  }
+  & h1, h2, h3, .as-h1, .as-h2, .as-h3 {
     margin-top: 1.5em;
   }
   &--extra > * ~ * {

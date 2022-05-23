@@ -18,7 +18,8 @@ h3,
 h4,
 .as-h1,
 .as-h2,
-.as-h3 {
+.as-h3,
+blockquote {
   overflow-wrap: break-word;
   font-size: clamp(
     var(--fluid-type-min, 1rem),
@@ -27,28 +28,30 @@ h4,
   );
 }
 
-@supports(hyphens: auto) {
-  p,
-  li {
-    text-align: justify;
-  }
-  p,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  .as-h1,
-  .as-h2,
-  .as-h3 {
-    hyphens: auto;
-  }
-}
+// @supports(hyphens: auto) {
+//   p,
+//   li {
+//     text-align: justify;
+//   }
+//   p,
+//   li,
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   .as-h1,
+//   .as-h2,
+//   .as-h3 {
+//     hyphens: auto;
+//   }
+// }
 
-p {
-  --fluid-type-min: 0.85em;
+p,
+blockquote {
+  line-height: 1.65;
+  --fluid-type-min: 0.8em;
   --fluid-type-target: 0.5vw;
-  --fluid-type-max: 1.25em;
+  --fluid-type-max: 1.2em;
 }
 
 a {
@@ -74,16 +77,16 @@ h1,
 
 h2,
 .as-h2 {
-  --fluid-type-min: 1rem;
-  --fluid-type-max: 2rem;
-  --fluid-type-target: 3vw;
+  --fluid-type-min: 1.25rem;
+  --fluid-type-max: 2.5rem;
+  --fluid-type-target: 3.25vw;
 }
 
 h3,
 .as-h3 {
-  --fluid-type-min: 0.75rem;
-  --fluid-type-max: 1.5rem;
-  --fluid-type-target: 2vw;
+  --fluid-type-min: 1rem;
+  --fluid-type-max: 2rem;
+  --fluid-type-target: 2.5vw;
 }
 
 .uppercase {
